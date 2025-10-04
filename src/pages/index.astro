@@ -1,20 +1,89 @@
 ---
-import Cta from '../components/Cta.astro';
-import Destacados from '../components/Destacados.astro';
-import Hero from '../components/Hero.astro';
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Cta from "../components/Cta.astro";
+import Destacados from "../components/Destacados.astro";
+import Hero from "../components/Hero.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 
-
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const items = [
+  {
+    itemtitulo: "Permisos y Licencias",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "/servicios/permisos-y-licencias",
+    icon: "thumbs-up",
+  },
+	{
+    itemtitulo: "Consultoria",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "info-circle",
+  },
+	{
+    itemtitulo: "Registros Empresas",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "content",
+  },
+	{
+    itemtitulo: "Licencia Actividades Económicas",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "address",
+  },
+	{
+    itemtitulo: "Servicios de Contabilidad, Impuestos Y Administrativos",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "pie",
+  },
+	{
+    itemtitulo: "Trámites en Alcadias",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "apply",
+  },
+];
 ---
 
 <Layout>
-	<Hero/>
-	<Welcome />
-	<Destacados/>
-	
-	<Cta/>
+  <Hero />
+  <Welcome />
+
+  <section class="bg-white">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="max-w-screen-md mb-8 lg:mb-16">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Damos soluciones
+        </h2>
+        <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+          Here at Flowbite we focus on markets where technology, innovation, and
+          capital can unlock long-term value and drive economic growth.
+        </p>
+      </div>
+      <div
+        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:space-y-0"
+      >
+        {
+          items.map((item) => (
+            <Destacados
+              itemtitulo={item.itemtitulo}
+              descrip={item.descrip}
+              url={item.url}
+              icon={item.icon}
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <Cta titulo="Consulta con Un Asesor" descrip="Escribenosm tenems soluciones para ti"/>
+  </section>
 </Layout>

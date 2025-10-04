@@ -1,0 +1,119 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderInterno from "../../components/HeaderInterno.astro";
+import SeccionServicios from "../../components/SeccionServicios.astro";
+import Cta from "../../components/Cta.astro";
+
+---
+
+<Layout>
+  <HeaderInterno
+    titulo="Permisos y Licencias"
+    descrip="Lo mejor que tenemos aqui"
+  />
+  <SeccionServicios>
+    <div id="accordion-collapse" data-accordion="collapse">
+      <h4 id="accordion-open-heading-1">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-3 font-bold rtl:text-right border border-gray-700 hover:text-slate-200 hover:bg-indigo-600 gap-3"
+          data-accordion-target="#accordion-open-body-1"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-1"
+        >
+          <span class="flex items-center"> Permiso Bomberos</span>
+          <i class="icofont-duotone icofont-expand icofont-2x"></i>
+        </button>
+      </h4>
+      <div
+        id="accordion-open-body-1"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-1"
+      >
+        <div class="p-5 border border-b-0 border-gray-600">
+          <h3 class="font-bold">Requisitos</h3>
+          <ul class="list-disc p-6">
+            <li>Cédula Catastral</li>
+            <li>Cédula Catastral</li>
+          </ul>
+          <p>
+            <span class="font-bold">Tiempo estimado 2 a 3 semanas</span>
+          </p>
+          <p>
+            <span class="font-bold">Precio:</span> A partir de 200$ según MT2 del
+            Local
+          </p>
+        </div>
+      </div>
+      {/*** dos */}
+      <h4 id="accordion-open-heading-2">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-bold rtl:text-right border border-gray-700 hover:text-slate-200 hover:bg-indigo-600 gap-3"
+          data-accordion-target="#accordion-open-body-2"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-2"
+        >
+          <span class="flex items-center"> PErmiso Sanitario</span>
+          <i class="icofont-duotone icofont-expand icofont-2x"></i>
+        </button>
+      </h4>
+      <div
+        id="accordion-open-body-2"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-2"
+      >
+        <div class="p-5 border border-b-0 border-gray-600">
+          <h3 class="font-bold">Requisitos</h3>
+          <ul class="list-disc p-6">
+            <li>Cédula Catastral</li>
+            <li>Cédula Catastral</li>
+          </ul>
+          <p>
+            <span class="font-bold">Tiempo estimado 2 a 3 semanas</span>
+          </p>
+          <p>
+            <span class="font-bold">Precio:</span> A partir de 200$ según MT2 del
+            Local
+          </p>
+        </div>
+      </div>
+      {/*** tres */}
+      <h4 id="accordion-open-heading-3">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-bold rtl:text-right border border-gray-700 hover:text-slate-200 hover:bg-indigo-600 gap-3"
+          data-accordion-target="#accordion-open-body-3"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-3"
+        >
+          <span class="flex items-center"> Sellados Libros Legales</span>
+          <i class="icofont-duotone icofont-expand icofont-2x"></i>
+        </button>
+      </h4>
+      <div
+        id="accordion-open-body-3"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-3"
+      >
+        <div class="p-5 border border-b-1 border-gray-600">
+          <h3 class="font-bold">Requisitos</h3>
+          <ul class="list-disc p-6">
+            <li>Cédula Catastral</li>
+            <li>Cédula Catastral</li>
+          </ul>
+          <p>
+            <span class="font-bold">Tiempo estimado 2 a 3 semanas</span>
+          </p>
+          <p>
+            <span class="font-bold">Precio:</span> A partir de 200$ según MT2 del
+            Local
+          </p>
+        </div>
+      </div>
+      {/*** cuatro */}
+      {/*** cinco */}
+    </div>
+  </SeccionServicios>
+  <Cta titulo="Alguna Pregunta?" descrip="No te quedes con la duda" />
+</Layout>
