@@ -1,31 +1,74 @@
 ---
+import Cta from "../../components/Cta.astro"
+import Destacados from "../../components/Destacados.astro"
+import HeaderInterno from "../../components/HeaderInterno.astro"
+import Seccion from "../../components/Seccion.astro"
+
 import Layout from "../../layouts/Layout.astro"
 
+const items = [
+  {
+    itemtitulo: "Permisos y Licencias",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "/servicios/permisos-y-licencias",
+    icon: "thumbs-up",
+  },
+  {
+    itemtitulo: "Consultoria",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "info-circle",
+  },
+  {
+    itemtitulo: "Registros Empresas",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "content",
+  },
+  {
+    itemtitulo: "Licencia Actividades Económicas",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "address",
+  },
+  {
+    itemtitulo: "Servicios de Contabilidad, Impuestos Y Administrativos",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "pie",
+  },
+  {
+    itemtitulo: "Trámites en Alcadias",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    icon: "apply",
+  },
+];
 
 ---
 <Layout>
-   <section class="bg-white">
-    <div
-      class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
-    >
-      <div class="font-light text-gray-500 sm:text-lg">
-        <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-          Servicios
-        </h1>
-         
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
-        <img
-          class="w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-          alt="office content 1"
-        />
-        <img
-          class="mt-4 w-full lg:mt-10 rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-          alt="office content 2"
-        />
-      </div>
-    </div>
-  </section>
+  <Seccion>
+  <HeaderInterno titulo="Servicios" descrip=""/>
+  <div
+          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 my-2"
+        >
+          {
+            items.map((item) => (
+              <Destacados
+                itemtitulo={item.itemtitulo}
+                descrip={item.descrip}
+                url={item.url}
+                icon={item.icon}
+              />
+            ))
+          }
+        </div>
+   <Cta titulo="Ponte En Contacto" descrip=""/>
+  </Seccion>
 </Layout>
