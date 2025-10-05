@@ -12,42 +12,42 @@ const items = [
     descrip:
       "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
     url: "/servicios/permisos-y-licencias",
-    icon: "thumbs-up",
+    imagen: "image-4.jpg",
   },
   {
-    itemtitulo: "Consultoria",
+    itemtitulo: "Trámites Administrativos",
     descrip:
       "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
     url: "",
-    icon: "info-circle",
+    imagen: "image-4.jpg",
   },
   {
     itemtitulo: "Registros Empresas",
     descrip:
       "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
     url: "",
-    icon: "content",
+    imagen: "image-4.jpg",
   },
   {
     itemtitulo: "Licencia Actividades Económicas",
     descrip:
       "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
     url: "",
-    icon: "address",
+    imagen: "image-4.jpg",
   },
   {
-    itemtitulo: "Servicios de Contabilidad, Impuestos Y Administrativos",
+    itemtitulo: "Asesoria Contable y Tributaria",
     descrip:
       "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
     url: "",
-    icon: "pie",
+    imagen: "image-4.jpg",
   },
   {
     itemtitulo: "Trámites en Alcadias",
     descrip:
       "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
     url: "",
-    icon: "apply",
+    imagen: "image-4.jpg",
   },
 ];
 ---
@@ -71,7 +71,7 @@ const items = [
           </p>
         </div>
         <div
-          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0"
+          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-4 md:space-y-0"
         >
           {
             items.map((item) => (
@@ -79,7 +79,7 @@ const items = [
                 itemtitulo={item.itemtitulo}
                 descrip={item.descrip}
                 url={item.url}
-                icon={item.icon}
+                imagen={item.imagen}
               />
             ))
           }

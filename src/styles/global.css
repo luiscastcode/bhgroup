@@ -1,7 +1,7 @@
- /* El archivo base.css inyectado por defecto de la integración */
-  
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- 
+/* El archivo base.css inyectado por defecto de la integración */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
@@ -11,54 +11,58 @@
   --color-primary-700: #000;
   --color-fuente: #333;
   --color-bermuda: #78dcca;
-  
-   
 }
 
- body{
+body {
   background-color: #fff;
   background-image: linear-gradient(#fff, #f8f8f8);
   color: #333;
- }
-    body, p {
-      font-family: 'Inter', 'sans-serif';       
-      font-weight: 300;
+}
+body,
+p {
+  font-family: "Inter", "sans-serif";
+  font-weight: 300;
+}
+h1 {
+  font-size: 48px;
+  
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 32px;
+}
 
-    }
- h1  {
-       
-      font-size: 48px;
-      font-weight: 800;       
-    }
-    h1,h2,h3 {
-      font-family:'Poppins','sans-serif';
-             
-    }
-    h2 {
-      font-size: 40px;
-       
-    }
- .destacados {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+h1,
+h2,
+h3 {
+  font-family: "Poppins", "sans-serif";
+  font-weight: 600;
+}
+
+.destacados {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 @-webkit-keyframes destacados {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }

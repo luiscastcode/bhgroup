@@ -4,7 +4,33 @@ import HeaderInterno from "../../components/HeaderInterno.astro";
 import SeccionServicios from "../../components/SeccionServicios.astro";
 import Cta from "../../components/Cta.astro";
 import Seccion from "../../components/Seccion.astro";
-Seccion;
+import Destacados from "../../components/Destacados.astro";
+ 
+const items = [
+  {
+    itemtitulo: "Permisos y Licencias",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "/servicios/permisos-y-licencias",
+    imagen: "image-4.jpg",
+  },
+  {
+    itemtitulo: "Trámites Administrativos",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    imagen: "image-4.jpg",
+  },
+  {
+    itemtitulo: "Registros Empresas",
+    descrip:
+      "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+    url: "",
+    imagen: "image-4.jpg",
+  },
+ 
+   
+];
 ---
 
 <Layout>
@@ -119,5 +145,34 @@ Seccion;
       </div>
     </SeccionServicios>
     <Cta titulo="Alguna Pregunta?" descrip="No te quedes con la duda" />
+    <section class=" bg-white my-4 rounded-2xl py-16 px-2 md:px-8">
+      <div class="flex flex-col items-center justify-center mx-auto">
+      <h3
+        class="max-w-2xl mb-4 tracking-tight leading-none text-center"
+      >
+        Más Servicios de BerHoyte & Asociados
+      </h3>
+      <p
+        class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-center"
+      >
+        No solo llevamos cuentas: impulsamos confianza, organización y visión de futuro.
+      </p>
+      </div>
+       <div
+          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0"
+        >
+          {
+            items.map((item) => (
+              <Destacados
+                itemtitulo={item.itemtitulo}
+                descrip={item.descrip}
+                url={item.url}
+                imagen={item.imagen}
+              />
+            ))
+          }
+        </div>
+    </section>
   </Seccion>
+  
 </Layout>
