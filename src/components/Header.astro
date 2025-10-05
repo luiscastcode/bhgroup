@@ -1,5 +1,6 @@
 ---
 import BotonWs from "./BotonWs.astro";
+import NavAlcadias from "./NavAlcadias.astro";
 import NavDropdown from "./NavDropdown.astro";
 import NavLinks from "./NavLinks.astro";
 
@@ -14,7 +15,7 @@ const enlaces = [
 ---
 
 <header class="w-full">
-  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
     <div
       class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
     >
@@ -25,10 +26,14 @@ const enlaces = [
           alt="BerHoyte Logo"
         />
       </a>
-      <div class="hidden md:flex">
-        <NavDropdown />
-      </div>
+
       <div class="flex items-center md:order-2">
+        <div class="hidden md:flex mr-8">
+          <NavDropdown />
+        </div>
+         <div class="hidden md:flex mr-8">
+          <NavAlcadias />
+        </div>
         <BotonWs nombre="cotizacion" />
 
         <button

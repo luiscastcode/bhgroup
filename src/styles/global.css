@@ -8,18 +8,22 @@
 @source "../../node_modules/flowbite";
 
 @theme {
-  --color-primary-700: #121063;
-  --color-tahiti: #3ab7bf;
+  --color-primary-700: #000;
+  --color-fuente: #333;
   --color-bermuda: #78dcca;
   
    
 }
 
- 
+ body{
+  background-color: #fff;
+  background-image: linear-gradient(#fff, #f8f8f8);
+  color: #333;
+ }
     body, p {
-      font-family: 'Inter', 'sans-serif';
-       
+      font-family: 'Inter', 'sans-serif';       
       font-weight: 300;
+
     }
  h1  {
        
